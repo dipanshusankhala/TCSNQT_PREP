@@ -1,0 +1,46 @@
+Find Second Largest Element in an array
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    int n;
+    cin>>n;
+    
+    int arr[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    
+   int maxi1=INT_MIN;
+   int maxi2=INT_MIN;
+   
+   for(int i=0;i<n;i++)
+   {
+       if(arr[i]>maxi1)
+       {
+           maxi2=maxi1;
+           maxi1=arr[i];
+       }
+       else if(maxi2<arr[i] && arr[i]!=maxi1)
+       {
+           maxi2=arr[i];
+       }
+   }
+   
+   cout<<"Second Maximum element of array "<<maxi2<<endl;
+    
+
+    return 0;
+}
+
+
+7
+1 2 4 6 7 5 7
+Second Maximum element of array 6
+
+
+=== Code Execution Successful ===
