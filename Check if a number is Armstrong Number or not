@@ -1,0 +1,64 @@
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    cout<<"Enter a Number "<<endl;
+    int n;
+    cin>>n;
+    
+    int count=0;
+    
+    int old=n;
+    
+    while(old!=0)
+    {
+        int digit=old%10;
+        count++;
+        old=old/10;
+    }
+    
+    int temp=n;
+    int sum=0;
+    
+    while(temp!=0)
+    {
+        int digit=temp%10;
+        sum=sum+pow(digit,count);
+        temp=temp/10;
+    }
+    
+    if(sum==n)
+    {
+        cout<<"Number is armstrong"<<endl;
+    }
+    else
+    {
+        cout<<"Number is not armstrong"<<endl;
+    }
+    
+    
+    
+    
+    return 0;
+}
+
+
+
+Enter a Number 
+153
+Number is armstrong
+
+
+=== Code Execution Successful ===
+
+
+
+Enter a Number 
+170
+Number is not armstrong
+
+
+=== Code Execution Successful ===
