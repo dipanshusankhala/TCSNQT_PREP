@@ -1,0 +1,56 @@
+Check whether a number is Perfect Number or not
+
+Problem Statement: Perfect Number. Write a program to find whether a number is a perfect number or not.
+
+A perfect number is defined as a number that is the sum of its proper divisors ( all its positive divisors excluding itself). 
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    cout<<"Enter a Number "<<endl;
+    int n;
+    cin>>n;
+    
+    int sum=0;
+    
+    for(int i=1;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            sum=sum+i;
+        }
+    }
+    
+    if(n==sum)
+    {
+        cout<<"Number is perfect"<<endl;
+    }
+    else
+    {
+        cout<<"Number is not perfect"<<endl;
+    }
+    
+    return 0;
+}
+
+
+
+Enter a Number 
+15
+Number is not perfect
+
+
+=== Code Execution Successful ===
+
+
+
+Enter a Number 
+6
+Number is perfect
+
+
+=== Code Execution Successful ===
