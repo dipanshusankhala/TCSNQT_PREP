@@ -1,0 +1,157 @@
+
+
+1) BRUTE FORCE APPROACH - loop till n
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+int main() {
+    
+    int n;
+    
+    cout<<"Enter the Number "<<endl;
+    cin>>n;
+    
+    bool flag=true;
+    
+    for(int i=2;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            flag=false;
+            break;
+        }
+        
+        
+    }
+    
+    if(flag)
+    {
+        cout<<"The NUMBER IS PRIME"<<endl;
+    }
+    else
+    {
+        cout<<"NUMBER IS NOT PRIME"<<endl;
+    }
+    
+    
+    
+    return 0;
+}
+
+output -
+
+Enter the Number 
+32
+NUMBER IS NOT PRIME
+
+
+=== Code Execution Successful ===
+
+
+2) Optimal approach -  loop till n/2 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+int main() {
+    
+    int n;
+    
+    cout<<"Enter the Number "<<endl;
+    cin>>n;
+    
+    bool flag=true;
+    
+    for(int i=2;i<n/2;i++)
+    {
+        if(n%i==0)
+        {
+            flag=false;
+            break;
+        }
+        
+        
+    }
+    
+    if(flag)
+    {
+        cout<<"The NUMBER IS PRIME"<<endl;
+    }
+    else
+    {
+        cout<<"NUMBER IS NOT PRIME"<<endl;
+    }
+    
+    
+    
+    return 0;
+}
+
+
+output -
+
+Enter the Number 
+17
+The NUMBER IS PRIME
+
+
+=== Code Execution Successful ===
+
+
+
+3) loop till square root of n
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+int main() {
+    
+    int n;
+    
+    cout<<"Enter the Number "<<endl;
+    cin>>n;
+    
+    bool flag=true;
+    
+    for(int i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            flag=false;
+            break;
+        }
+        
+        
+    }
+    
+    if(flag)
+    {
+        cout<<"The NUMBER IS PRIME"<<endl;
+    }
+    else
+    {
+        cout<<"NUMBER IS NOT PRIME"<<endl;
+    }
+    
+    
+    
+    return 0;
+}
+
+
+Enter the Number 
+24
+NUMBER IS NOT PRIME
+
+
+=== Code Execution Successful ===
