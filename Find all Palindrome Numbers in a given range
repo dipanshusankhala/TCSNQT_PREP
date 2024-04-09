@@ -1,0 +1,66 @@
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool palindrone(int n)
+{
+    int temp=n;
+    int rev=0;
+    while(temp!=0)
+    {
+        int digit=temp%10;
+        rev=rev*10+digit;
+        temp=temp/10;
+        
+    }
+    
+    if(n==rev)
+    {
+        return 1;
+    }
+    
+    return false;
+    
+}
+
+int main() {
+    
+    int min;
+    int max;
+    
+    cout<<"Enter Min value "<<endl;
+    cin>>min;
+    
+    cout<<"Enter Max value "<<endl;
+    cin>>max;
+    
+    for(int i=min;i<=max;i++)
+    {
+        if(palindrone(i))
+        {
+            cout<<i<<" ";
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
+
+
+
+
+
+Enter Min value 
+10
+Enter Max value 
+50
+11 22 33 44 
+
+=== Code Execution Successful ===
