@@ -1,0 +1,42 @@
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    int n;
+    cin>>n;
+    
+    int rev=0,old=n;
+    
+    while(old!=0)
+    {
+        int digit=old%10;
+        rev=rev*10+digit;
+        old=old/10;
+    }
+    
+    cout<<n<<" "<<rev<<endl;
+    if(n==rev)
+    {
+        cout<<"NUMBER IS PALINDROME"<<endl;
+    }
+    else
+    {
+        cout<<"NUMBER IS NOT PALINDROME"<<endl;
+        
+    }
+    
+    
+    return 0;
+}
+
+
+
+121
+121 121
+NUMBER IS PALINDROME
+
+
+=== Code Execution Successful ===
