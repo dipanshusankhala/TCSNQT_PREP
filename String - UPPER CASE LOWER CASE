@@ -1,0 +1,68 @@
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+char tohigh(char ch)
+{
+    if(ch>='A' && ch<='Z')
+    {
+        return ch;
+    }
+    else if(ch>='a' && ch<='z')
+    {
+        ch=ch-'a'+'A';
+        return ch;
+    }
+}
+
+char tolow(char ch)
+{
+    if(ch>='A' && ch<='Z')
+    {
+        ch=ch-'A'+'a';
+        return ch;
+    }
+    else if(ch>='a' && ch<='z')
+    {
+        
+        return ch;
+    }
+}
+
+int main() {
+        
+    cout<<"Enter the string with spaces "<<endl;
+    
+    string S;
+    getline(cin,S);
+    
+    for(int i=0;i<S.length();i++)
+    {
+       S[i]=tolow(S[i]);
+       //S[i]=tohigh(S[i]);
+        
+    }
+    
+    cout<<"After Lower CASE - "<<S<<endl;
+
+    return 0;
+}
+
+
+
+Enter the string with spaces 
+DIPANSHU SANKHALA
+After Lower CASE - dipanshu sankhala
+
+
+=== Code Execution Successful ===
+
+
+
+Enter the string with spaces 
+dipanshu sankhala
+After High CASE - DIPANSHU SANKHALA
+
+
+=== Code Execution Successful ===
