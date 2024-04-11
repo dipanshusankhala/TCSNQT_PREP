@@ -1,0 +1,37 @@
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    string S;
+    
+    
+    getline(cin,S);
+    
+    //cout<<S<<endl;
+    
+    int sum=0;
+    
+    for(int i=0;i<S.length();i++)
+    {
+        sum=sum+S[i];
+    }
+    
+    
+    
+    
+    cout<<"Sum of character - "<<sum<<endl;
+        
+
+    
+    return 0;
+}
+
+
+Dipanshu Sankhala
+Sum of character - 1663
+
+
+=== Code Execution Successful ===
