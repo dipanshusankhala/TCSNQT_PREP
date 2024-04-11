@@ -1,0 +1,53 @@
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+    string S;
+    
+    getline(cin,S);
+    
+    int low=0;
+    int high=S.length()-1;
+    bool flag=true;
+    
+    while(low<high)
+    {
+        if(S[low]!=S[high])
+        {
+            flag=false;
+            break;
+        }
+        low++;
+        high--;
+    }
+    
+    if(flag==true)
+    {
+        cout<<"PALINDROME FOUND "<<endl;
+    }
+    else
+    {
+        cout<<"NOT PALINDROME"<<endl;
+    }
+    
+    return 0;
+}
+
+
+ABCDCBA
+PALINDROME FOUND 
+
+
+=== Code Execution Successful ===
+
+
+
+
+TAKE U FORWARD
+NOT PALINDROME
+
+
+=== Code Execution Successful ===
