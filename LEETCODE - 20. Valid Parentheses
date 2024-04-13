@@ -1,0 +1,94 @@
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool ispar(string S)
+{
+    stack<char>st;
+    
+    for(int i=0;i<S.length();i++ )
+    {
+        char ch=S[i];
+        
+        if(ch=='(' || ch=='{' || ch=='[')
+        {
+            st.push(ch);
+            
+        }
+        else
+        {
+            if(st.empty())
+            {
+                return false;
+                //cout<<"NOT BALANCED"<<endl;
+            }
+            
+            char top=st.top();
+            
+            if((ch==')' && top!='(') || (ch=='}' && top!='{') ||(ch==']' && top!='['))
+            {
+                return false;
+            }
+            
+            st.pop();
+        }
+    }
+    
+    return st.empty();
+    
+}
+
+int main()
+{
+    
+    cout<<"Enter the String - "<<endl;
+    
+    string S;
+    cin>>S;
+    
+    
+    bool flag=ispar(S);
+    
+    if(flag==true)
+    {
+        cout<<"BALANCED"<<endl;
+    }
+    else
+    {
+        cout<<"NOT BALANCED"<<endl;
+    }
+
+    return 0;
+}
+
+
+
+
+Enter the String - 
+(]
+NOT BALANCED
+
+
+=== Code Execution Successful ===
+
+
+
+
+
+
+
+Enter the String - 
+()[]{}
+BALANCED
+
+
+=== Code Execution Successful ===
