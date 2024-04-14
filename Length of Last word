@@ -1,0 +1,41 @@
+Given a string S consisting of upper/lower-case alphabets and empty space characters ‘ ‘. The string may contain spaces at the end. You will have return the length of last word which consists of alphabets only.
+
+Example 1:
+
+Input:
+S = "Geeks for Geeks"
+Output: 5
+Explanation: The last word is "Geeks" 
+             of length 5.
+Example 2:
+
+Input:
+S = "Start Coding Here "
+Output: 4
+Explanation: The last word is "Here" of
+             length 4.
+
+
+
+
+
+int findLength(string s){
+    
+    int count=0;
+    
+    for(int i=s.length();i>=0;i--)
+    {
+        if((s[i]>='a' && s[i]<='z') || (s[i]>='A' && s[i]<='Z') )
+        {
+            count++;
+        }
+        else if(s[i]==' ' && count!=0)
+        {
+            break;
+        }
+    }
+    //code
+    
+    return count;
+    
+}
