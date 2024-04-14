@@ -1,0 +1,78 @@
+
+1) 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string S;
+    getline(cin,S);
+    
+    string ans;
+    
+    for(int i=0;i<S.length();i++)
+    {
+        char ch=S[i];
+        if(ch!=' ')
+        {
+            ans.push_back(ch);
+        }
+        else
+        {
+            continue;
+        }
+    }
+    
+    cout<<ans<<endl;
+    
+    return 0;
+}
+
+Dipanshu Sankhala
+DipanshuSankhala
+
+
+=== Code Execution Successful ===
+
+
+
+2)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string S;
+    getline(cin,S);
+    
+   int count=0;
+   
+   for(int i=0;i<S.length();i++)\
+   {
+       char ch=S[i];
+       
+       if(ch!=' ')
+       {
+           S[count]=S[i];
+           count++;
+       }
+       
+       //cout<<count<<endl;
+   }
+   S.resize(count);
+   
+   
+   
+   
+   cout<<S<<endl;
+    return 0;
+}
+
+
+Dipanshu is good and handsome boii
+Dipanshuisgoodandhandsomeboii
+
+
+=== Code Execution Successful ===
