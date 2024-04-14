@@ -1,0 +1,56 @@
+Problem Statement: Given a string, calculate the frequency of characters in a string.
+
+Examples:
+
+Example 1:
+Input: takeuforward
+Output: a2 d1 e1 f1 k1 o1 r2 t1 u1 w1 
+Explanation: Count of every character of string is printed.
+
+Example 2:
+Input: articles
+Output: a1 c1 e1 i1 l1 r1 s1 t1 
+Explanation: Count of every character of string is printed.
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    
+    string S;
+    cin>>S;
+    
+    map<char,int>mp;
+    
+    for(int i=0;i<S.length();i++)
+    {
+        mp[S[i]]++;
+    }
+    
+    for(auto i:mp)
+    {
+        cout<<i.first<<i.second<<" ";
+    }
+    
+    cout<<endl;
+    
+    return 0;
+}
+
+
+
+takeuforward
+a2 d1 e1 f1 k1 o1 r2 t1 u1 w1 
+
+
+=== Code Execution Successful ===
+
+
+Dipanshu
+D1 a1 h1 i1 n1 p1 s1 u1 
+
+
+=== Code Execution Successful ===
